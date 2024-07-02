@@ -20,3 +20,7 @@ sequelize.sync()
   .catch(err => {
     console.error('Unable to connect to the database:', err);
   });
+
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/views/login.html');
+});
